@@ -1,4 +1,4 @@
-﻿// Zadacha54();
+// Zadacha54();
 
 void Zadacha54()
 {
@@ -126,18 +126,18 @@ void Zadacha58()
 
     WriteArray(numbers);
 
-    void WriteArray(int[,] numbers)
+}
+void WriteArray(int[,] numbers)
+{
+    for (int i = 0; i < numbers.GetLength(0); i++)
     {
-        for (int i = 0; i < numbers.GetLength(0); i++)
+        for (int j = 0; j < numbers.GetLength(1); j++)
         {
-            for (int j = 0; j < numbers.GetLength(1); j++)
-            {
-                if (numbers[i, j] / 10 <= 0)
-                    Console.Write($" {numbers[i, j]} ");
+            if (numbers[i, j] / 10 <= 0)
+                Console.Write($" {numbers[i, j]} ");
 
-                else Console.Write($"{numbers[i, j]} ");
-            }
-            Console.WriteLine();
+            else Console.Write($"{numbers[i, j]} ");
         }
+        Console.WriteLine();
     }
 }
